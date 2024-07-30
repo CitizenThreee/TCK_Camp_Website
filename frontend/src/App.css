@@ -1,0 +1,110 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.bg-1 {
+  background-color: #ec752b;
+}
+
+.bg-1b {
+  background-color: #f17c3355;
+  backdrop-filter: blur(25px);
+}
+
+.bg-2b {
+  background-color: #00000022;
+  backdrop-filter: blur(25px);
+}
+
+.bg-3b {
+  background-color: #6c6c6c55;
+}
+
+.font-1 {
+  font-family: "Amaranth", sans-serif;
+}
+
+.hover-text:hover {
+  color: #d07a45;
+}
+
+.active-text {
+  color: #e0ad8d;
+}
+
+.active-text:hover {
+  color: #e0ad8d;
+}
+
+.skewed-box {
+  border-radius: 25px 0;
+  border: 2px solid #a9a9a977;
+  color: white;
+}
+
+.skewed-btn {
+  border-radius: 25px 0;
+  background-color: #00000022;
+  border: 2px solid #78787877;
+  color: white;
+  backdrop-filter: blur(25px);
+  transition: transform 0.8s ease;
+}
+
+.skewed-box a {
+  color: rgb(198, 198, 198);
+}
+
+.accordion-item {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+.expanded {
+  max-height: 600px;
+}
+
+.skewed-btn:hover {
+  background-color: #37373780;
+  backdrop-filter: blur(40px);
+}
+
+.w-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-full {
+  height: calc(100vh - 70px);
+}
+
+.h-container {
+  min-height: calc(100vh - 70px);;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.clear-btn {
+  background-color: transparent;
+  color: white;
+}
+
+.dropdown-arrow {
+  transition: transform 0.8s ease;
+}
+
+.flipped {
+  transform: rotate(180deg);
+}
+
+.btn-primary {
+  background-color: #eee4;
+  border: 1.5px solid white
+}
+
+
+
