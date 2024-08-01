@@ -46,7 +46,7 @@ export default function RegistrationContainer({onToggleForm}) {
             console.log(session);
 
             const result = await stripe.redirectToCheckout({
-                sessionId: session.id,
+                sessionId: session.body.id,
             });
 
             if (result.error) {
