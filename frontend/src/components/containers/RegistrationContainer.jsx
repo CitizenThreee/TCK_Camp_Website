@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useRegistrationContext } from "../../context/RegistrationProvider";
 import RegistrationForm from "../forms/RegistrationForm";
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe('pk_test_51PiP40L8W1i3hvWFEUs0wgFaUhN1ofq3RNBKdVGugvXUdIoIcv0Vjqfl3EfmBALvdQ8GoBGYc2Rrs2ERpZvgpNkA00w7CPAIyG');
 
 export default function RegistrationContainer({onToggleForm}) {
     const { registration, handleSetRegistration } = useRegistrationContext();
@@ -27,10 +30,38 @@ export default function RegistrationContainer({onToggleForm}) {
         signature: true
     });
 
+    const onCheckout = async () => {
+        try {
+            const stripe = await stripePromise;
+
+            const response = await fetch('https://vbiowx8w0l.execute-api.ap-southeast-2.amazonaws.com/prod/checkout-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            const session = await response.json();
+
+            console.log(session);
+
+            const result = await stripe.redirectToCheckout({
+                sessionId: session.id,
+            });
+
+            if (result.error) {
+                console.error(result.error.message);
+            }
+        }
+        catch(e) {
+            console.log(e);
+        }
+    }
+
+
     const onSubmit = () => {
         if(validateValues()) {
-            onToggleForm();
-            handleSetRegistration({
+            {/*handleSetRegistration({
                 type: 'standard',
                 fname: '',
                 lname: '',
@@ -58,7 +89,8 @@ export default function RegistrationContainer({onToggleForm}) {
                 bring: false,
                 fees: false,
                 signature: ''
-            });
+            });*/}
+            onCheckout();
         }
     }
     
