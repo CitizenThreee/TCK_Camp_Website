@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useRegistrationContext } from '../../context/RegistrationProvider';
 
-export default function RegistrationForm({onSubmit, errors, onChangeError}) {
+export default function RegistrationForm({onSubmit, errors, onChangeError, regoLoading}) {
     const { registration, handleSetRegistration } = useRegistrationContext();
 
     const onChangeRegistration = (e) => {
@@ -325,21 +325,21 @@ export default function RegistrationForm({onSubmit, errors, onChangeError}) {
             <Form.Group className='text-white d-flex flex-column mb-4'>
                 <Form.Label className='fs-5 font-1'>Camp dates and times*</Form.Label>
                 <p style={{textAlign: 'justify'}}>TCK Camp 2025 will commence at 2pm on Tuesday, 18th January 2025, and will continue until after lunch on Saturday, 22nd January 2025.</p>
-                <Form.Check inline label={'I have read and understand the above'} type='radio' name='dates' id='lunch1'
+                <Form.Check inline label={'I have read and understand the above'} type='radio' name='dates' id='dates'
                 checked={registration.date} onChange={() => onChangeRadio('date', true)} isInvalid={!errors.date}/>
             </Form.Group>
 
             <Form.Group className='text-white d-flex flex-column mb-4'>
                 <Form.Label className='fs-5 font-1'>What to bring*</Form.Label>
                 <p style={{textAlign: 'justify'}}>Campers must bring their own bedding (sheets/sleeping bag/pillows; mattresses are provided), towels, toiletries, and enough clothing for five days as well as some old clothing for messy games. We also ask that campers bring a Bible, a notebook, and a pen. We love board games, so if you have any you're willing to bring with you, please mark your name on them and pack them in your bag. The camp will include a beach trip, so you should also bring swimwear and a beach towel. Please note that while Eastwest College is a safe environment, we do not accept responsibility for lost/damaged property, so please make sure that especially if expensive items are brought to camp they are well looked-after and ideally insured.</p>
-                <Form.Check inline label={'I have read and accept all of the above'} type='radio' name='bring' id='lunch1'
+                <Form.Check inline label={'I have read and accept all of the above'} type='radio' name='bring' id='bring'
                 checked={registration.bring} onChange={() => onChangeRadio('bring', true)} isInvalid={!errors.bring}/>
             </Form.Group>
 
             <Form.Group className='text-white d-flex flex-column mb-4'>
                 <Form.Label className='fs-5 font-1'>Registration fees*</Form.Label>
                 <p style={{textAlign: 'justify'}}>Registration costs are indicated on this website. If registering one camper, please select 'standard'. Any additional siblings from the same family receive a discounted rate. If registering three siblings, for example, please pay one standard registration + two additional sibling registrations. If you have any concerns, please get in touch by e-mail for a paper registration form and pay by direct credit.</p>
-                <Form.Check inline label={'I have read and accept all of the above'} type='radio' name='fees' id='lunch1'
+                <Form.Check inline label={'I have read and accept all of the above'} type='radio' name='fees' id='fees'
                 checked={registration.fees} onChange={() => onChangeRadio('fees', true)} isInvalid={!errors.fees}/>
             </Form.Group>
 
@@ -356,7 +356,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError}) {
                 </FloatingLabel>
             </Form.Group>
 
-            <Button className='w-100 btn-primary' onClick={onSubmit}>Register</Button>
+            <Button className='w-100 btn-primary' disabled={regoLoading} onClick={onSubmit}>{regoLoading ? 'Loading...' : 'Register'}</Button>
         </Form>
     )
 }

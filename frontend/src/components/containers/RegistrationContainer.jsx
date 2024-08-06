@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRegistrationContext } from "../../context/RegistrationProvider";
 import RegistrationForm from "../forms/RegistrationForm";
 import { loadStripe } from '@stripe/stripe-js';
+import { v4 as uuidv4 } from 'uuid';
 
 const stripePromise = loadStripe('pk_test_51PiP40L8W1i3hvWFEUs0wgFaUhN1ofq3RNBKdVGugvXUdIoIcv0Vjqfl3EfmBALvdQ8GoBGYc2Rrs2ERpZvgpNkA00w7CPAIyG');
 
-export default function RegistrationContainer({onToggleForm}) {
-    const { registration, handleSetRegistration } = useRegistrationContext();
+export default function RegistrationContainer() {
+    const { registration } = useRegistrationContext();
+    const [ regoLoading, setRegoLoading ] = useState(false);
     const [ errors, setErrors ] = useState({
         fname: true,
         lname: true,
@@ -32,65 +34,57 @@ export default function RegistrationContainer({onToggleForm}) {
 
     const onCheckout = async () => {
         try {
+            const registrationId = uuidv4();
             const stripe = await stripePromise;
-
             const response = await fetch('https://vbiowx8w0l.execute-api.ap-southeast-2.amazonaws.com/prod/checkout-session', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                }
+                },
+                body: JSON.stringify({regoid: registrationId, regoType: registration.type, data: registration})
             });
 
             const session = await response.json();
-
             console.log(session);
+
+            {/*const createRegoRes = await fetch('https://vbiowx8w0l.execute-api.ap-southeast-2.amazonaws.com/prod/registration', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    regoid: registrationId,
+                    paymentStatus: 'PENDING',
+                    ...registration
+                })
+            });*/}
+
+            //const rego = await createRegoRes.json();
+            //console.log(rego);
 
             const result = await stripe.redirectToCheckout({
                 sessionId: session.body.id,
             });
 
             if (result.error) {
+                setRegoLoading(false);
                 console.error(result.error.message);
             }
         }
         catch(e) {
+            setRegoLoading(false);
             console.log(e);
         }
     }
 
 
     const onSubmit = () => {
+        setRegoLoading(true);
         if(validateValues()) {
-            {/*handleSetRegistration({
-                type: 'standard',
-                fname: '',
-                lname: '',
-                email: '',
-                phone: '',
-                dob: '',
-                address: '',
-                city: '',
-                state: '',
-                zip: '',
-                country: '',
-                allergies: false,
-                allergyDetails: '',
-                c1fname: '',
-                c1lname: '',
-                c1phone: '',
-                c2fname: '',
-                c2lname: '',
-                c2phone: '',
-                placesLived: '',
-                affiliations: '',
-                plans: '',
-                lunch: -1,
-                date: false,
-                bring: false,
-                fees: false,
-                signature: ''
-            });*/}
             onCheckout();
+        }
+        else{
+            setRegoLoading(false);
         }
     }
     
@@ -135,7 +129,7 @@ export default function RegistrationContainer({onToggleForm}) {
     return (
         <div className='p-3 d-flex align-items-start h-container'>
             <section className='p-3 bg-2b skewed-box mx-auto w-content d-flex flex-column'>
-                <RegistrationForm onSubmit={onSubmit} errors={errors} onChangeError={onChangeError}/>
+                <RegistrationForm onSubmit={onSubmit} errors={errors} onChangeError={onChangeError} regoLoading={regoLoading}/>
             </section>
         </div>
     )
