@@ -6,12 +6,12 @@
 
 .bg-1b {
   background-color: #ff8c455f;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(15px);
 }
 
 .bg-2b {
   background-color: #1a1a1a5f;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(15px);
 }
 
 .bg-3b {
