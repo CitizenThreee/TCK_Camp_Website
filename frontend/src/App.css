@@ -5,13 +5,13 @@
 }
 
 .bg-1b {
-  background-color: #f17c3355;
-  backdrop-filter: blur(25px);
+  background-color: #ff8c455f;
+  backdrop-filter: blur(15px);
 }
 
 .bg-2b {
-  background-color: #00000022;
-  backdrop-filter: blur(25px);
+  background-color: #1a1a1a5f;
+  backdrop-filter: blur(15px);
 }
 
 .bg-3b {
@@ -35,17 +35,15 @@
 }
 
 .skewed-box {
-  border-radius: 25px 0;
-  border: 2px solid #a9a9a977;
+  border-radius: 5px;
+  border: 1px solid rgba(162, 162, 255, 0.568);
   color: white;
 }
 
 .skewed-btn {
-  border-radius: 25px 0;
-  background-color: #00000022;
-  border: 2px solid #78787877;
+  border-radius: 5px;
+  border: 1px solid rgba(162, 162, 255, 0.568);
   color: white;
-  backdrop-filter: blur(25px);
   transition: transform 0.8s ease;
 }
 
@@ -80,6 +78,10 @@
   height: calc(100vh - 70px);
 }
 
+.h-100 {
+  height: 100%;
+}
+
 .h-container {
   min-height: calc(100vh - 70px);;
 }
@@ -104,6 +106,15 @@
 .btn-primary {
   background-color: #eee4;
   border: 1.5px solid white
+}
+
+.right-item {
+  max-width: 80%;
+  text-align: justify;
+}
+
+.list-container > :nth-child(odd) {
+  background-color: #f3f3f3;
 }
 
 

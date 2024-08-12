@@ -1,22 +1,12 @@
 import TopContainer from "../components/containers/TopContainer";
 import map5 from '../assets/map5.jpg'
-import ContactForm from "../components/forms/ContactForm";
-import { useState } from "react";
 
 export default function Contact() {
-    const [ contactInfo, setContactInfo ] = useState({
-        fname: '',
-        lname: '',
-        email: '',
-        message: ''
-    });
-
-
     return (
         <>
             <TopContainer activeTab={'Contact'} background={map5}>
-                <div className='px-3 d-flex flex-column my-3 h-container'>
-                    <section className='p-3 bg-2b skewed-box mx-auto w-content'>
+                <div className='p-3 d-flex flex-column h-container'>
+                    <section className='p-3 bg-2b skewed-box mx-auto my-auto w-content'>
                         <h2 className='font-1'>Get In Touch</h2>
                         <p className='fs-5 text-justify' style={{textAlign: 'justify'}}>If you have any questions about camp, rego, or online payments, feel free to contact us through the methods provided below or the contact form. We'll aim to get back to you as soon as we can. If using the contact form, please make sure to provide an e-mail address so we can send you a reply.</p>
 
@@ -38,9 +28,7 @@ export default function Contact() {
                                 </p>
                             </div>
                         </section>
-
-                        {/*<ContactForm/>*/}
-                    </section>
+                    </section> 
                 </div>
             </TopContainer>
         </>

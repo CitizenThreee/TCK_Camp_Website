@@ -74,7 +74,6 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
                                 Please enter the camper's first name.
                             </Form.Control.Feedback>
                         </FloatingLabel>
-                        
                     </Form.Group>
                 </Col>
                 <Col xs={12} sm={6} className="mb-3">

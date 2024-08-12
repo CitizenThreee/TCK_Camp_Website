@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRegistrationContext } from "../../context/RegistrationProvider";
 import RegistrationForm from "../forms/RegistrationForm";
 import { loadStripe } from '@stripe/stripe-js';
@@ -47,21 +47,6 @@ export default function RegistrationContainer() {
             const session = await response.json();
             console.log(session);
 
-            {/*const createRegoRes = await fetch('https://vbiowx8w0l.execute-api.ap-southeast-2.amazonaws.com/prod/registration', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    regoid: registrationId,
-                    paymentStatus: 'PENDING',
-                    ...registration
-                })
-            });*/}
-
-            //const rego = await createRegoRes.json();
-            //console.log(rego);
-
             const result = await stripe.redirectToCheckout({
                 sessionId: session.body.id,
             });
@@ -76,7 +61,6 @@ export default function RegistrationContainer() {
             console.log(e);
         }
     }
-
 
     const onSubmit = () => {
         setRegoLoading(true);

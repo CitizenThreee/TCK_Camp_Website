@@ -3,13 +3,13 @@ import Button from 'react-bootstrap/esm/Button'
 export default function RegisterContainer({onToggleForm}) {
     return (
         <div className='p-3 d-flex align-items-start h-container'>
-            <section className='p-3 bg-2b skewed-box mx-auto w-content d-flex flex-column'>
+            <section className='p-3 bg-2b skewed-box mx-auto w-content d-flex flex-column my-auto'>
                 <h2 className='font-1'>Prices</h2>
-                <div className='fs-4 font-1 d-flex justify-content-between'>
+                <div className='fs-4 d-flex justify-content-between'>
                     <p>Standard Camper</p>
                     <p>$140</p>
                 </div>
-                <div className='fs-4 font-1 d-flex justify-content-between'>
+                <div className='fs-4 d-flex justify-content-between'>
                     <p>Additional Sibling</p>
                     <p>$110</p>
                 </div>
