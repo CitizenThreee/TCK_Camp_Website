@@ -1,10 +1,4 @@
-import NavBar from "../components/navigation/NavBar";
-import fire from '../assets/fire.jpg';
-import map1 from '../assets/map1.jpg';
-import map2 from '../assets/map2.jpg';
-import map3 from '../assets/map3.jpg';
 import map5 from '../assets/map5.jpg';
-import Footer from "../components/containers/Footer";
 import TopContainer from "../components/containers/TopContainer";
 import ExpandableBox from "../components/containers/ExpandableBox";
 
