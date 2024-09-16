@@ -5,33 +5,6 @@ import AdminBar from '../navigation/AdminBar';
 import CamperCard from '../elements/CamperCard';
 import AdminFilterForm from '../forms/AdminFilterForm';
 
-const camper1 = {
-    fname: 'Aedan',
-    lname: 'Beisly',
-    dob: '02/03/2002',
-    email: 'albeisly@gmail.com',
-    phone: '02102608347',
-    address: '7 Cornwall Street',
-    city: 'Mossburn',
-    state: 'Southland',
-    country: 'New Zealand',
-    zip: '9793',
-    allergies: true,
-    allergyDetails: 'Allergic to cats',
-    c1fname: 'Sal',
-    c1lname: 'Beisly',
-    c1phone: '0275271029',
-    c2fname: 'Gregg',
-    c2lname: 'Beisly',
-    c2phone: '02245673134',
-    type: 'standard',
-    paymentStatus: 'PAID',
-    lunch: 2,
-    plans: 'aldfj lehlfea f ehfa ef kje agef agfe eiakd tbdyg hfeyg bd fiey bdkytadb fkyt kadkjf eytr kadb kdkt kadt kayt kabkhkay oyadkf',
-    affiliations: ' aldfj lehlfea f ehfa ef kje agef agfe eiakd tbdyg hfeyg bd fiey bdkytadb fkyt kadkjf eytr kadb kdkt kadt kayt kabkhkay oyadkf afjlekyta dyetadlyd tyahbeya ofeyfaldtyatalay eyfah dkfa yey letyilad lyteli ahleytl artyelat',
-    placesLived: ' aldfj lehlfea f ehfa ef kje agef agfe eiakd tbdyg hfeyg bd fiey bdkytadb fkyt kadkjf eytr kadb kdkt kadt kayt kabkhkay oyadkf'
-}
-
 function GetYear() {
     const today = new Date();
     let currentYear = today.getFullYear();

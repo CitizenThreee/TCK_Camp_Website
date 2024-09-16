@@ -30,7 +30,8 @@ export function RegistrationProvider(props) {
         date: false,
         bring: false,
         fees: false,
-        signature: ''
+        signature: '',
+        time: '',
     })
 
     function handleSetRegistration(registration) {

@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/esm/Button'
+import data from '../../data.json';
 
 export default function RegisterContainer({onToggleForm}) {
     return (
@@ -7,13 +8,14 @@ export default function RegisterContainer({onToggleForm}) {
                 <h2 className='font-1'>Prices</h2>
                 <div className='fs-4 d-flex justify-content-between'>
                     <p>Standard Camper</p>
-                    <p>$140</p>
+                    <p>{`$${data.standardprice}`}</p>
                 </div>
                 <div className='fs-4 d-flex justify-content-between'>
                     <p>Additional Sibling</p>
-                    <p>$110</p>
+                    <p>{`$${data.additionalprice}`}</p>
                 </div>
-                <Button className='mx-5 mt-2 mb-5' onClick={onToggleForm}>Register</Button>
+                {!data.registrationenabled && <p className='mx-auto'>Registrations are not open yet, please check back later!</p>}
+                <Button className='mx-5 mt-2 mb-5' onClick={onToggleForm} disabled={!data.registrationenabled}>Register</Button>
                 <p className='font-1 fs-5 mb-0'>Cancelation Policy</p>
                 <p className='fs-6 text-justify' style={{textAlign: "justify"}}>
                     If you cancel up to one week prior to the first day of camp, fees will be fully
