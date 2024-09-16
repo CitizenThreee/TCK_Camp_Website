@@ -41,7 +41,7 @@ export default function RegistrationContainer() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({regoid: registrationId, regoType: registration.type, data: {...registration}})
+                body: JSON.stringify({regoid: registrationId, regoType: registration.type, data: {...registration, time: Date.now()}})
             });
 
             const session = await response.json();

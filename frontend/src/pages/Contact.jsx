@@ -1,10 +1,9 @@
 import TopContainer from "../components/containers/TopContainer";
-import map5 from '../assets/map5.jpg'
 
 export default function Contact() {
     return (
         <>
-            <TopContainer activeTab={'Contact'} background={map5}>
+            <TopContainer activeTab={'Contact'}>
                 <div className='p-3 d-flex flex-column h-container'>
                     <section className='p-3 bg-2b skewed-box mx-auto my-auto w-content'>
                         <h2 className='font-1'>Get In Touch</h2>

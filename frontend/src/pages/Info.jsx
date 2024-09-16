@@ -1,16 +1,11 @@
-import map5 from '../assets/map5.jpg';
 import TopContainer from "../components/containers/TopContainer";
 import ExpandableBox from "../components/containers/ExpandableBox";
-import { useEffect } from 'react';
+import data from '../data.json';
 
 export default function Info() {
-    useEffect(() => {
-        alert('This site is still under development, info may be placeholder and registrations will not work :)')
-    }, [])
-
     return (
         <>
-            <TopContainer activeTab={'Info'} background={map5}>
+            <TopContainer activeTab={'Info'}>
                 <div className='px-3 py-3 overflow-y-auto h-container'>
                     <ExpandableBox name={'Who'}>
                         <p className="mt-2" style={{ textAlign: 'justify' }}>
@@ -25,11 +20,11 @@ export default function Info() {
                     </ExpandableBox>
                     <ExpandableBox name={'When'}>
                         <p className="mt-2" style={{ textAlign: 'justify' }}>
-                            Camp sign-in opens from 2pm on Tuesday, the 14th of January, and will last until 2pm on Saturday,
-                            the 18th of January. If you are a parent and you'd like to stay for the parents’ lunch on Saturday
+                            {`Camp sign-in opens from 2pm on Tuesday, the ${data.campstartdate} of January, and will last until 2pm on Saturday,
+                            the ${data.campenddate} of January. If you are a parent and you'd like to stay for the parents’ lunch on Saturday
                             when you come to pick up your young people, you are more than welcome to do so! Just let us know on the
                             registration form. This lunch was a fantastic time last year, and we were very excited to see so many third
-                            culture parents connect with each other over some great kai!
+                            culture parents connect with each other over some great kai!`}
                         </p>
                     </ExpandableBox>
                     <ExpandableBox name={'Where'}>

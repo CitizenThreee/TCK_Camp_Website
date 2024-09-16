@@ -4,6 +4,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useRegistrationContext } from '../../context/RegistrationProvider';
+import data from '../../data.json';
 
 export default function RegistrationForm({onSubmit, errors, onChangeError, regoLoading}) {
     const { registration, handleSetRegistration } = useRegistrationContext();
@@ -260,7 +261,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
             <hr className='text-white'/>
 
             <Form.Label className='fs-4 font-1 text-white'>About the camper</Form.Label>
-            <p className='text-white' style={{textAlign: 'justify'}}>All of the following fields are entirely optional - they help us structure camp sessions and games, but you do not have to provide this information if you have privacy concerns. We do not share your information to third-party organisations, but it is subject to Squarespace's terms and conditions.</p>
+            <p className='text-white' style={{textAlign: 'justify'}}>All of the following fields are entirely optional - they help us structure camp sessions and games, but you do not have to provide this information if you have privacy concerns. We do not share your information with third-party organisations.</p>
 
             <Form.Group className='mb-3'>
                 <FloatingLabel label="Places lived overseas">
@@ -303,7 +304,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
 
             <Form.Group className='text-white d-flex flex-column mb-4'>
                 <Form.Label className='fs-5 font-1'>Camp lunch*</Form.Label>
-                <p style={{textAlign: 'justify'}}>Parents are invited to join us for lunch at 12:30pm on Saturday, 22nd January 2022 at Eastwest College before campers head home. We hope that the event gives a chance for parents to meet the parents of other TCKs, some of the campers, and camp leaders over a free meal. Please indicate below if you would like to join us. If you're unsure as of yet, indicate as such for now and let us know by e-mail whenever you can.</p>
+                <p style={{textAlign: 'justify'}}>{`Parents are invited to join us for lunch at 12:30pm on Saturday, ${data.campenddatefull} at Eastwest College before campers head home. We hope that the event gives a chance for parents to meet the parents of other TCKs, some of the campers, and camp leaders over a free meal. Please indicate below if you would like to join us. If you're unsure as of yet, indicate as such for now and let us know by e-mail whenever you can.`}</p>
                 <Form.Check inline label={'My parents already indicated they are coming on a registration form of another camper'} 
                 checked={registration.lunch == 0} onChange={() => onChangeRadio('lunch', 0)}
                 type='radio' name='lunch' id='lunch1' isInvalid={!errors.lunch}/>
