@@ -23,8 +23,8 @@ export default function Info() {
                             {`Camp sign-in opens from 2pm on Tuesday, the ${data.campstartdate} of January, and will last until 2pm on Saturday,
                             the ${data.campenddate} of January. If you are a parent and you'd like to stay for the parents’ lunch on Saturday
                             when you come to pick up your young people, you are more than welcome to do so! Just let us know on the
-                            registration form. This lunch was a fantastic time last year, and we were very excited to see so many third
-                            culture parents connect with each other over some great kai!`}
+                            registration form. The lunch is always a good opportunity for parents to meet up with other parents and friends and
+                            hear about camp over some great kai.`}
                         </p>
                     </ExpandableBox>
                     <ExpandableBox name={'Where'}>
@@ -50,9 +50,12 @@ export default function Info() {
                             together in a way that is so unique to TCKs, and each year our worship team is made up of amazing young
                             people who just come with a voice or an instrument and jump right on in.
                             <br /><br />
-                            We run games and activities (like bonfire night, movie night, and beach trip day, plus way more!) to
+                            We run games and activities (like bonfire night, movie night, mahi, and beach trip day, plus way more!) to
                             engage you with those around you and enjoy your summer, and we still make sure there is plenty of free time
-                            on campus to get to know some incredible people. The food is not at all bad either, and there's plenty of it!
+                            on campus to get to know some incredible people. Mahi is the practical work we engage in for an hour or two 
+                            one morning at camp. It is always a fun time of physical work and connecting with one another. One of our 
+                            values is to serve our community, so at camp you can choose to do some physical work out on a local bush reserve, 
+                            or some lighter physical work on the college campus. The food is not at all bad either, and there's plenty of it!
                             Delicious breakfasts, lunches, and dinners are provided, as well as other snacks throughout the day; we try
                             our best to accommodate your special dietary requirements, too, so let us know on the registration form if
                             you have any of those.
@@ -61,10 +64,12 @@ export default function Info() {
                     <section className='p-3 bg-2b mb-3 skewed-box mx-auto w-content'>
                         <h2 className='font-1'>You'll need to bring:</h2> <br />
                         <ul>
+                            <li>Something to sleep in, like a sleeping bag or double bed sheets and a duvet, and a pillow or two</li> <br />
                             <li>Plenty of clothes to last five days, including some that can potentially get dirty, and something that you can swim in</li> <br />
                             <li>Towels (shower and beach) and toiletries (think toothbrush + toothpaste, deodorant, shampoo + conditioner, soap)</li> <br />
                             <li>Something to sleep in, like a sleeping bag or a duvet, and a pillow or two</li> <br />
                             <li>If you like board/card games, you'll love camp! Feel free to bring some along, but make sure you note down somewhere on them that they belong to you</li> <br />
+                            <li>Clothing or an item from a country you have lived in. This is always popular with campers and helps us learn more about one another and celebrate our different cultures</li> <br />
                             <li>A Bible, and something to take notes with; phones are fine, but can serve to be a distraction at times so it's best to bring a notepad/notebook + a pen instead</li> <br />
                             <li>Your very honest self</li> <br />
                             <li>Something that makes you, you! If you're into art, bring your artsy stuff along! Music? Bring an instrument! Photography? A camera! You get the picture.</li> <br />

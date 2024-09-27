@@ -15,6 +15,8 @@ export function RegistrationProvider(props) {
         state: '',
         zip: '',
         country: '',
+        medical: '',
+        medicalDetails: '',
         allergies: false,
         allergyDetails: '',
         c1fname: '',

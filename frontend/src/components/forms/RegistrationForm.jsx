@@ -189,6 +189,23 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
                 </FloatingLabel>
             </Form.Group>
 
+            <Form.Label className='fs-4 font-1 text-white'>Medical</Form.Label>
+            <p className='text-white' style={{textAlign: 'justify'}}>*Does the camper have any medical concerns that you feel we should be aware of?</p>
+            <div className='text-white font-1 mb-3'>
+                <Form.Check inline label={'yes'} type='radio' name='medical' checked={registration.medical} onChange={() => onChangeRadio('medical', true)}/>
+                <Form.Check inline label={'no'} type='radio' name='medical' checked={!registration.medical} onChange={() => onChangeRadio('medical', false)}/>
+            </div>
+
+            <p className='text-white'>If you answered yes to the above, please explain in more detail:</p>
+            <Form.Group className="mb-3" >
+                <FloatingLabel label="Medical concerns">
+                    <Form.Control isInvalid={!errors.medicalDetails} type="text" placeholder="medical" name='medicalDetails' value={registration.medicalDetails} onChange={onChangeRegistration}/>
+                    <Form.Control.Feedback type="invalid">
+                        You have indicated the camper has medical concerns we should be aware of, please provide details on what medical concerns the camper has.
+                    </Form.Control.Feedback>
+                </FloatingLabel>
+            </Form.Group>
+
             <hr className='text-white'/>
 
             <Form.Label className='fs-4 font-1 text-white'>Emergency contacts</Form.Label>
@@ -331,7 +348,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
 
             <Form.Group className='text-white d-flex flex-column mb-4'>
                 <Form.Label className='fs-5 font-1'>What to bring*</Form.Label>
-                <p style={{textAlign: 'justify'}}>Campers must bring their own bedding (sheets/sleeping bag/pillows; mattresses are provided), towels, toiletries, and enough clothing for five days as well as some old clothing for messy games. We also ask that campers bring a Bible, a notebook, and a pen. We love board games, so if you have any you're willing to bring with you, please mark your name on them and pack them in your bag. The camp will include a beach trip, so you should also bring swimwear and a beach towel. Please note that while Eastwest College is a safe environment, we do not accept responsibility for lost/damaged property, so please make sure that especially if expensive items are brought to camp they are well looked-after and ideally insured.</p>
+                <p style={{textAlign: 'justify'}}>Campers must bring their own bedding (sleeping bag or double bed sheets and duvet, and pillows. Mattresses are provided), towels, toiletries, and enough clothing for five days as well as some old clothing for messy games. We also ask that campers bring a Bible, a notebook, and a pen. We love board games, so if you have any you're willing to bring with you, please mark your name on them and pack them in your bag. The camp will include a beach trip, so you should also bring swimwear and a beach towel. Please note that while Eastwest College is a safe environment, we do not accept responsibility for lost/damaged property, so please make sure that especially if expensive items are brought to camp they are well looked-after and ideally insured.</p>
                 <Form.Check inline label={'I have read and accept all of the above'} type='radio' name='bring' id='bring'
                 checked={registration.bring} onChange={() => onChangeRadio('bring', true)} isInvalid={!errors.bring}/>
             </Form.Group>

@@ -58,7 +58,7 @@ export default function Home() {
                                 <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>
                                     In January 2016, several staff at Eastwest College organised a weekend for mission 
                                     TCKs to get together on the college campus. The invitation went out to NZ mission agencies 
-                                    and thse known within the missions community. It was specifically for young people from 
+                                    and those known within the missions community. It was specifically for young people from 
                                     age 14 and upwards who had returned to NZ having spent some time overseas with their parents 
                                     in missions. That first weekend included 23 young people and was such a success that the 
                                     feedback was a TCK Camp of 1 week!!! 
