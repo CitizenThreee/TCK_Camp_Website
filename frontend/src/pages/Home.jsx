@@ -12,16 +12,16 @@ export default function Home() {
             setIsAtTop(window.scrollY === 0);
         };
 
-        const handleLoad = () => {
+        /*const handleLoad = () => {
             alert('This site is still under development, info may be placeholder and registrations will not work :)')
-        };
+        };*/
 
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', handleLoad);
+        //window.addEventListener('load', handleLoad);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('load', handleLoad);
+            //window.removeEventListener('load', handleLoad);
         }
     }, []);
 
@@ -53,6 +53,14 @@ export default function Home() {
                                 <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>
                                     {data.homeblurb}
                                 </p>
+                                <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>
+                                    Camp this year will have a special focus on ‘belonging’ and how we can strengthen this as a NZ TCK whānau.
+                                </p>
+                                <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>
+                                    This upcoming camp will also include an evening event to celebrate 10 years of awesome 
+                                    TCK camps in Aotearoa. Come prepared to have a fun evening of looking back and having fun together.
+                                </p>
+
                                 <hr className='my-4'/>
                                 <h2 className='font-1'>A Little Bit Of Camp History:</h2>
                                 <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>

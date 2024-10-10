@@ -64,10 +64,9 @@ export default function Info() {
                     <section className='p-3 bg-2b mb-3 skewed-box mx-auto w-content'>
                         <h2 className='font-1'>You'll need to bring:</h2> <br />
                         <ul>
-                            <li>Something to sleep in, like a sleeping bag or double bed sheets and a duvet, and a pillow or two</li> <br />
                             <li>Plenty of clothes to last five days, including some that can potentially get dirty, and something that you can swim in</li> <br />
                             <li>Towels (shower and beach) and toiletries (think toothbrush + toothpaste, deodorant, shampoo + conditioner, soap)</li> <br />
-                            <li>Something to sleep in, like a sleeping bag or a duvet, and a pillow or two</li> <br />
+                            <li>Something to sleep in, like a sleeping bag or double bed sheets and a duvet, and a pillow or two</li> <br />
                             <li>If you like board/card games, you'll love camp! Feel free to bring some along, but make sure you note down somewhere on them that they belong to you</li> <br />
                             <li>Clothing or an item from a country you have lived in. This is always popular with campers and helps us learn more about one another and celebrate our different cultures</li> <br />
                             <li>A Bible, and something to take notes with; phones are fine, but can serve to be a distraction at times so it's best to bring a notepad/notebook + a pen instead</li> <br />

@@ -4,7 +4,7 @@ import RegistrationForm from "../forms/RegistrationForm";
 import { loadStripe } from '@stripe/stripe-js';
 import { v4 as uuidv4 } from 'uuid';
 
-const stripePromise = loadStripe('pk_test_51PiP40L8W1i3hvWFEUs0wgFaUhN1ofq3RNBKdVGugvXUdIoIcv0Vjqfl3EfmBALvdQ8GoBGYc2Rrs2ERpZvgpNkA00w7CPAIyG');
+const stripePromise = loadStripe('pk_live_51PiP40L8W1i3hvWFFtONbMJJ9iAipTXI3dIy0giDboGcUt0cePeZG3vTlaFZXRSdUIiLq7F6TgPcQWMeBaiTcVKv00nnpjky6V');
 
 export default function RegistrationContainer() {
     const { registration } = useRegistrationContext();

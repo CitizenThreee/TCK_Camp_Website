@@ -224,8 +224,8 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
                 </Col>
                 <Col xs={12} sm={6}>
                     <Form.Group className="mb-3" >
-                        <FloatingLabel label="First Name">
-                            <Form.Control isInvalid={!errors.c1lname} type="text" placeholder="first name" name='c1lname' value={registration.c1lname} onChange={onChangeRegistration}/>
+                        <FloatingLabel label="Last Name">
+                            <Form.Control isInvalid={!errors.c1lname} type="text" placeholder="last name" name='c1lname' value={registration.c1lname} onChange={onChangeRegistration}/>
                             <Form.Control.Feedback type="invalid">
                                 Please enter a last name for emergency contact 1.
                             </Form.Control.Feedback>
@@ -235,7 +235,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
             </Row>
             <Form.Group className="mb-3" >
                 <FloatingLabel label="Phone">
-                    <Form.Control isInvalid={!errors.c1phone} type="number" placeholder="phone" name='c1phone' value={registration.c1phone} onChange={onChangeRegistration}/>
+                    <Form.Control isInvalid={!errors.c1phone} type="text" placeholder="phone" name='c1phone' value={registration.c1phone} onChange={onChangeRegistration}/>
                     <Form.Control.Feedback type="invalid">
                         Please enter a phone number for emergency contact 1.
                     </Form.Control.Feedback>
@@ -257,8 +257,8 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
                 </Col>
                 <Col xs={12} sm={6}>
                     <Form.Group className="mb-3" >
-                        <FloatingLabel label="First Name">
-                            <Form.Control isInvalid={!errors.c2lname} type="text" placeholder="first name" name='c2lname' value={registration.c2lname} onChange={onChangeRegistration}/>
+                        <FloatingLabel label="Last Name">
+                            <Form.Control isInvalid={!errors.c2lname} type="text" placeholder="last name" name='c2lname' value={registration.c2lname} onChange={onChangeRegistration}/>
                             <Form.Control.Feedback type="invalid">
                                 Please enter a last name for emergency contact 2.
                             </Form.Control.Feedback>
@@ -268,7 +268,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
             </Row>
             <Form.Group className="mb-3" >
                 <FloatingLabel label="Phone">
-                    <Form.Control isInvalid={!errors.c2phone} type="number" placeholder="phone" name='c2phone' value={registration.c2phone} onChange={onChangeRegistration}/>
+                    <Form.Control isInvalid={!errors.c2phone} type="text" placeholder="phone" name='c2phone' value={registration.c2phone} onChange={onChangeRegistration}/>
                     <Form.Control.Feedback type="invalid">
                         Please enter a phone number for emergency contact 2.
                     </Form.Control.Feedback>

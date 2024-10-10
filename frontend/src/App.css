@@ -62,7 +62,7 @@
   transition: transform 0.8s ease;
 }
 
-.skewed-box a {
+.skewed-box a, .skewed-btn a {
   color: rgb(198, 198, 198);
 }
 
