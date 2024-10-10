@@ -60,6 +60,14 @@ export default function CamperCard({ data={} }) {
                         <p className="fs-6 m-0 right-item">{data.allergyDetails}</p>
                     </div>}
                     <div className="d-flex justify-content-between w-100 mb-1 px-1">
+                        <p className="fs-6 fw-semibold m-0">Medical:</p>
+                        <p className="fs-6 m-0 right-item">{data.medical ? 'Yes' : 'None'}</p>
+                    </div>
+                    {data.medical && <div className="d-flex justify-content-between w-100 mb-1 px-1">
+                        <p className="fs-6 fw-semibold m-0">Medical details:</p>
+                        <p className="fs-6 m-0 right-item">{data.medicalDetails}</p>
+                    </div>}
+                    <div className="d-flex justify-content-between w-100 mb-1 px-1">
                         <p className="fs-6 fw-semibold m-0">Lunch Status:</p>
                         <p className="fs-6 m-0 right-item">
                             {data.lunch == 0 && 'Indicated Elsewhere'}

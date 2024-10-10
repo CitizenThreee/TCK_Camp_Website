@@ -47,6 +47,14 @@
   color: white;
 }
 
+.quote-box {
+  border-radius: 15px;
+  margin: 30px auto;
+  color: white;
+  background-color: #0000005f;
+  backdrop-filter: blur(5px);
+}
+
 .skewed-btn {
   border-radius: 5px;
   border: 1px solid rgba(162, 162, 255, 0.568);
@@ -54,7 +62,7 @@
   transition: transform 0.8s ease;
 }
 
-.skewed-box a {
+.skewed-box a, .skewed-btn a {
   color: rgb(198, 198, 198);
 }
 

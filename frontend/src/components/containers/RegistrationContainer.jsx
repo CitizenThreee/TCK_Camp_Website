@@ -4,7 +4,7 @@ import RegistrationForm from "../forms/RegistrationForm";
 import { loadStripe } from '@stripe/stripe-js';
 import { v4 as uuidv4 } from 'uuid';
 
-const stripePromise = loadStripe('pk_test_51PiP40L8W1i3hvWFEUs0wgFaUhN1ofq3RNBKdVGugvXUdIoIcv0Vjqfl3EfmBALvdQ8GoBGYc2Rrs2ERpZvgpNkA00w7CPAIyG');
+const stripePromise = loadStripe('pk_live_51PiP40L8W1i3hvWFFtONbMJJ9iAipTXI3dIy0giDboGcUt0cePeZG3vTlaFZXRSdUIiLq7F6TgPcQWMeBaiTcVKv00nnpjky6V');
 
 export default function RegistrationContainer() {
     const { registration } = useRegistrationContext();
@@ -19,6 +19,7 @@ export default function RegistrationContainer() {
         city: true,
         country: true,
         allergyDetails: true,
+        medicalDetails: true,
         c1fname: true,
         c1lname: true,
         c1phone: true,
@@ -95,6 +96,7 @@ export default function RegistrationContainer() {
         if(!registration.city.length) { passed = false; onChangeError('city', false) }
         if(!registration.country.length) { passed = false; onChangeError('country', false) }
         if(registration.allergies == true && !registration.allergyDetails.length ) { passed = false; onChangeError('allergyDetails', false) }
+        if(registration.medical == true && !registration.medicalDetails.length ) { passed = false; onChangeError('medicalDetails', false) }
         if(!registration.c1fname.length) { passed = false; onChangeError('c1fname', false) }
         if(!registration.c1lname.length) { passed = false; onChangeError('c1lname', false) }
         if(!registration.c1phone.length) { passed = false; onChangeError('c1phone', false) }

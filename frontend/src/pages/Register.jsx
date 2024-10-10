@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 export default function Register() {
     const [ showForm, setShowForm ] = useState(false);
 
-    useEffect(() => {
+    /*useEffect(() => {
         const handleLoad = () => {
             alert('This site is still under development, info may be placeholder and registrations will not work :)')
         };
@@ -16,7 +16,7 @@ export default function Register() {
         return () => {
             window.removeEventListener('load', handleLoad);
         }
-    }, []);
+    }, []);*/
 
     const onToggleForm = () => {
         setShowForm(!showForm);
