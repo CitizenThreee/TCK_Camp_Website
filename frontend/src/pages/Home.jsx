@@ -51,14 +51,9 @@ export default function Home() {
                                 <h2 className='font-1 mb-0'>{data.hometitle}</h2>
                                 <p className='m-0 pt-0 pb-2'>{data.homesubtitle}</p>
                                 <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>
-                                    {data.homeblurb}
-                                </p>
-                                <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>
-                                    Camp this year will have a special focus on ‘belonging’ and how we can strengthen this as a NZ TCK whānau.
-                                </p>
-                                <p className='fs-5 text-justify' style={{ textAlign: 'justify' }}>
-                                    This upcoming camp will also include an evening event to celebrate 10 years of awesome 
-                                    TCK camps in Aotearoa. Come prepared to have a fun evening of looking back and having fun together.
+                                    {data.homeblurb.split("\n").map((part, i) => (
+                                        <p key={i}>{part.trim()}</p>
+                                    ))}
                                 </p>
 
                                 <hr className='my-4'/>

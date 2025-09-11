@@ -8,11 +8,11 @@
 }
 
 .bg-1 {
-  background-color: #ec752b;
+  background-color: #1a4263;
 }
 
 .bg-1b {
-  background-color: #ff8c455f;
+  background-color: #1a4263cc;
   backdrop-filter: blur(15px);
 }
 
@@ -29,41 +29,67 @@
   font-family: "Amaranth", sans-serif;
 }
 
+.text-1 {
+  color: #fefaed;
+}
+
+.text-2 {
+  color: #be7d32;;
+}
+
 .hover-text:hover {
-  color: #d07a45;
+  color: #be7d32;
 }
 
 .active-text {
-  color: #e0ad8d;
+  color: #bf6b0d;
 }
 
 .active-text:hover {
-  color: #e0ad8d;
+  color: #be7d32;
+}
+
+.btn-primary {
+  background-color: #bf6b0d;
+  color: #fefaed;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #be9361;
+  color: #fefaed;
+  border: none;
+}
+
+.btn-primary:disabled {
+  background-color: #bf6b0d;
+  color: #fefaed;
+  border: none;
 }
 
 .skewed-box {
   border-radius: 5px;
-  border: 1px solid rgba(162, 162, 255, 0.568);
-  color: white;
+  border: 1px solid #1a4263;
+  color: #fefaed;
 }
 
 .quote-box {
   border-radius: 15px;
   margin: 30px auto;
-  color: white;
+  color: #fefaed;
   background-color: #0000005f;
   backdrop-filter: blur(5px);
 }
 
 .skewed-btn {
   border-radius: 5px;
-  border: 1px solid rgba(162, 162, 255, 0.568);
-  color: white;
+  border: 1px solid #1a4263;
+  color: #fefaed;
   transition: transform 0.8s ease;
 }
 
 .skewed-box a, .skewed-btn a {
-  color: rgb(198, 198, 198);
+  color: #fefaed;
 }
 
 .accordion-item {
@@ -107,7 +133,7 @@
 
 .clear-btn {
   background-color: transparent;
-  color: white;
+  color: #fefaed;
 }
 
 .dropdown-arrow {
@@ -118,18 +144,13 @@
   transform: rotate(180deg);
 }
 
-.btn-primary {
-  background-color: #eee4;
-  border: 1.5px solid white
-}
-
 .right-item {
   max-width: 80%;
   text-align: justify;
 }
 
 .list-container > :nth-child(odd) {
-  background-color: #f3f3f3;
+  background-color: #fefaed;
 }
 
 /* Styles for small screens */

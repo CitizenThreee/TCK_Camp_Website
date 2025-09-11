@@ -1,12 +1,12 @@
 {
-    "theme": "Belonging",
-    "hometitle": "TCK Camp 2025: Belonging",
-    "homesubtitle": "14-18th January",
-    "homeblurb": "TCK Camp is a camp run every January in Gordonton, Kirikiriroa, for NZ missions' community TCK's (Third Culture Kids). Third Culture Kids share much in common: ironically, a lot of our commonality comes from having little in common with everyone else around us. But, as much as TCKs form something of a cultural group of our own, we’re all on individual journeys and are at different stages of life. One person might be 16 years old and have a full knowledge of where they want to go next, while another might be 19 and struggling to fit into life here with no idea what they want to do.",
-    "registrationenabled": true,
-    "standardprice": 140,
-    "additionalprice": 110,
-    "campstartdate": "14th",
-    "campenddate": "18th",
-    "campenddatefull": "18th January 2025"
+    "theme": "Anchored",
+    "hometitle": "TCK Camp 2026: Anchored",
+    "homesubtitle": "13-17th January",
+    "homeblurb": "If it weren’t for ships and waka, and the people who journeyed in them, the world wouldn’t be nearly as connected as it is today. From ancient times, sea travel has been part of how we’ve explored, traded, and built relationships across the globe. But here’s the thing - every ship and waka needs an anchor. Not to hold us back, but to give us stability between the adventures. \n It’s the same with the TCK journey. Travel’s been a huge part of life, but so have the anchors that keep us steady - like the love and faithfulness of God, the wider mission whānau that surrounds us, our extended families, and even the kai that can feel unfamiliar one day and after some time, it warms the heart as well as the belly. \n The truth is, we have anchors. And it’s worth taking a moment to reflect on what keeps us steady in the times and places of change. Let's celebrate the anchors that actually help us move forward, across oceans and cultures. The journey goes on!",
+    "registrationenabled": false,
+    "standardprice": 150,
+    "additionalprice": 120,
+    "campstartdate": "13th",
+    "campenddate": "17th",
+    "campenddatefull": "17th January 2025"
 }
