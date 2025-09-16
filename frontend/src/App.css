@@ -12,12 +12,12 @@
 }
 
 .bg-1b {
-  background-color: #1a4263cc;
+  background-color: #1a4263e9;
   backdrop-filter: blur(15px);
 }
 
 .bg-2b {
-  background-color: #1a1a1a5f;
+  background-color: #fefaede2;
   backdrop-filter: blur(15px);
 }
 
@@ -30,11 +30,16 @@
 }
 
 .text-1 {
-  color: #fefaed;
+  color: #0d0d0d;
+  font-weight: 400;
 }
 
 .text-2 {
-  color: #be7d32;;
+  color: #be7d32;
+}
+
+.text-black {
+  color: #181818;
 }
 
 .hover-text:hover {
@@ -69,27 +74,23 @@
 
 .skewed-box {
   border-radius: 5px;
-  border: 1px solid #1a4263;
-  color: #fefaed;
+  /*border: 1px solid #1a4263;*/
 }
 
 .quote-box {
   border-radius: 15px;
   margin: 30px auto;
-  color: #fefaed;
-  background-color: #0000005f;
   backdrop-filter: blur(5px);
 }
 
 .skewed-btn {
   border-radius: 5px;
   border: 1px solid #1a4263;
-  color: #fefaed;
   transition: transform 0.8s ease;
 }
 
 .skewed-box a, .skewed-btn a {
-  color: #fefaed;
+  color: #000000;
 }
 
 .accordion-item {
@@ -102,7 +103,7 @@
 }
 
 .skewed-btn:hover {
-  background-color: #37373780;
+  background-color: #e5e1d6e2;
   backdrop-filter: blur(40px);
 }
 
@@ -138,6 +139,7 @@
 
 .dropdown-arrow {
   transition: transform 0.8s ease;
+  color: #000000;
 }
 
 .flipped {
@@ -179,7 +181,7 @@
     background-image: url('./assets/mahi-large.jpg');
   }
   .bg-map {
-    background-image: url('./assets/map-large.jpg');
+    background-image: url('./assets/map2-large.jpg');
   }
 }
 

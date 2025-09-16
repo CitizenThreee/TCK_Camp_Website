@@ -62,8 +62,9 @@ export default function Info() {
                         </p>
                     </ExpandableBox>
                     <section className='p-3 bg-2b mb-3 skewed-box mx-auto w-content'>
-                        <h2 className='font-1'>You'll need to bring:</h2> <br />
-                        <ul>
+                        <h2 className='font-1 text-1'>You'll need to bring:</h2> <br />
+                        <ul className='text-1'>
+                            <li>Covered shoes to wear while doing duties in the kitchen</li><br/>
                             <li>Plenty of clothes to last five days, including some that can potentially get dirty, and something that you can swim in</li> <br />
                             <li>Towels (shower and beach) and toiletries (think toothbrush + toothpaste, deodorant, shampoo + conditioner, soap)</li> <br />
                             <li>Something to sleep in, like a sleeping bag or double bed sheets and a duvet, and a pillow or two</li> <br />
@@ -73,8 +74,8 @@ export default function Info() {
                             <li>Your very honest self</li> <br />
                             <li>Something that makes you, you! If you're into art, bring your artsy stuff along! Music? Bring an instrument! Photography? A camera! You get the picture.</li> <br />
                         </ul>
-                        <p>Just a quick note: anything that you do bring along we cannot be liable for if anything happens to it. So if you bring something (especially something expensive like a camera), you've gotta be prepared to look out for it throughout camp.</p>
-                        <p>If you've read through all of this and still have some unanswered questions for us, head over to the contact page and fill out the contact form, or fire an e-mail at us. We look forward to seeing you in January! Kia tau te rangimarie</p>
+                        <p className='text-1'>Just a quick note: anything that you do bring along we cannot be liable for if anything happens to it. So if you bring something (especially something expensive like a camera), you've gotta be prepared to look out for it throughout camp.</p>
+                        <p className='text-1'>If you've read through all of this and still have some unanswered questions for us, head over to the contact page and fill out the contact form, or fire an e-mail at us. We look forward to seeing you in January! Kia tau te rangimarie</p>
                     </section>
                 </div>
             </TopContainer>

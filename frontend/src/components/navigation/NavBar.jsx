@@ -21,9 +21,8 @@ export default function NavBar({ active }) {
     
     return (
         <Navbar expand='md' className='font-1 bg-1b d-flex justify-content-between w-100' style={{ height: '70px', zIndex: 1 }}>
-            <Navbar.Brand className='ms-4 mb-2 mt-1 position-relative text-light'>
-                <h1 className='fs-2 text-1'>TCK CAMP</h1>
-                <h6 className='position-absolute fs-6 text-1' style={{ bottom: '-5px', right: '10px' }}>{data.theme}</h6>
+            <Navbar.Brand className='ms-4 pb-3 position-relative text-light h-100 d-flex align-items-center justify-content-center'>
+                <img src={'/TCKLogoLandscape_cream.png'} style={{ maxHeight: "400%", width: "auto" }} alt="Description" />
             </Navbar.Brand>
             <Navbar.Toggle className='me-3' aria-controls="navbar" style={{filter: 'invert(1)'}}/>
             <Navbar.Offcanvas placement="end" className={isMobile && 'bg-1b'}>
