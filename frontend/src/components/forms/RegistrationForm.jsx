@@ -341,7 +341,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
 
             <Form.Group className=' text-1 d-flex flex-column mb-4'>
                 <Form.Label className='fs-5 font-1'>Camp dates and times*</Form.Label>
-                <p style={{textAlign: 'justify'}}>TCK Camp 2025 will commence at 2pm on Tuesday, 18th January 2025, and will continue until after lunch on Saturday, 22nd January 2025.</p>
+                <p style={{textAlign: 'justify'}}>TCK Camp 2025 will commence at 2pm on Tuesday, {data.campstartdate} of January, and will continue until after lunch on Saturday, {data.campenddate} of January.</p>
                 <Form.Check inline label={<span className='text-1'>I have read and understand the above</span>} type='radio' name='dates' id='dates'
                 checked={registration.date} onChange={() => onChangeRadio('date', true)} isInvalid={!errors.date}/>
             </Form.Group>
