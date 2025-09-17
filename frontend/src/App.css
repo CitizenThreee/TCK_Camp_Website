@@ -161,7 +161,10 @@
     background-image: url('./assets/mahi-small.jpg');
   }
   .bg-map {
-    background-image: url('./assets/map-small.jpg');
+    background-image: url('./assets/map-small.png');
+  }
+  .theme-banner {
+    src: url('./assets/theme-banner-small.png');
   }
 }
 
@@ -171,7 +174,10 @@
     background-image: url('./assets/mahi-medium.jpg');
   }
   .bg-map {
-    background-image: url('./assets/map-medium.jpg');
+    background-image: url('./assets/map-medium.png');
+  }
+  .theme-banner {
+    src: url('./assets/theme-banner-medium.png');
   }
 }
 
@@ -181,7 +187,10 @@
     background-image: url('./assets/mahi-large.jpg');
   }
   .bg-map {
-    background-image: url('./assets/map2-large.jpg');
+    background-image: url('./assets/map-large.png');
+  }
+  .theme-banner {
+    src: url('./assets/theme-banner-large.png');
   }
 }
 
@@ -191,6 +200,9 @@
     background-image: url('./assets/mahi-xlarge.jpg');
   }
   .bg-map {
-    background-image: url('./assets/map-large.jpg');
+    background-image: url('./assets/map-xlarge.png');
+  }
+  .theme-banner {
+    src: url('./assets/theme-banner-xlarge.png');
   }
 }

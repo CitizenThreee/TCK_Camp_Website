@@ -4,6 +4,7 @@ import Footer from '../components/containers/Footer';
 import { useEffect, useState } from 'react';
 import data from '../data.json';
 import AnchoredTCKCamp from '../assets/AnchoredTCKCamp.png';
+import ThemeBanner from '../assets/theme-banner-large.png';
 
 export default function Home() {
     const [isAtTop, setIsAtTop] = useState(true);
@@ -52,7 +53,7 @@ export default function Home() {
                             <div className='pb-3 px-0 my-4 bg-2b skewed-box mx-auto w-content'>
                                 {!showHeroTextFallback && (
                                     <img
-                                        src={AnchoredTCKCamp}
+                                        src={ThemeBanner}
                                         className='w-100 mb-3 rounded-top'
                                         alt="TCK Camp 2026: Anchored 13-17th January"
                                         onLoad={() => setShowHeroTextFallback(false)}
