@@ -1,10 +1,19 @@
 import Button from 'react-bootstrap/esm/Button'
 import data from '../../data.json';
+import ThemeBanner from '../../assets/theme-banner-large.png';
 
 export default function RegisterContainer({onToggleForm}) {
     return (
         <div className='p-3 d-flex align-items-start h-container'>
+            
             <section className='p-3 bg-2b skewed-box mx-auto w-content d-flex flex-column my-auto'>
+            <img
+                src={ThemeBanner}
+                className='w-100 mb-3 rounded-top'
+                alt="TCK Camp 2026: Anchored 13-17th January"
+                onLoad={() => setShowHeroTextFallback(false)}
+                onError={() => setShowHeroTextFallback(true)}
+            />
                 <h2 className='font-1 text-1'>Prices</h2>
                 <div className='fs-4 d-flex justify-content-between text-1'>
                     <p>Standard Camper</p>

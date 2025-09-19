@@ -303,10 +303,10 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
                 </FloatingLabel>
             </Form.Group>
             <Form.Group className='mb-3'>
-                <FloatingLabel label={<span className='text-1'>2025 plans in brief</span>}>
+                <FloatingLabel label={<span className='text-1'>{data.campyear} plans in brief</span>}>
                     <Form.Control
                         as="textarea"
-                        placeholder="2025 plans in brief"
+                        placeholder={`${data.campyear} plans in brief`}
                         style={{ height: '80px' }}
                         className='mb-3'
                         name='plans' value={registration.plans} onChange={onChangeRegistration}
@@ -341,7 +341,7 @@ export default function RegistrationForm({onSubmit, errors, onChangeError, regoL
 
             <Form.Group className=' text-1 d-flex flex-column mb-4'>
                 <Form.Label className='fs-5 font-1'>Camp dates and times*</Form.Label>
-                <p style={{textAlign: 'justify'}}>TCK Camp 2025 will commence at 2pm on Tuesday, {data.campstartdate} of January, and will continue until after lunch on Saturday, {data.campenddate} of January.</p>
+                <p style={{textAlign: 'justify'}}>TCK Camp {data.campyear} will commence at 2pm on Tuesday, {data.campstartdate} of January, and will continue until after lunch on Saturday, {data.campenddate} of January.</p>
                 <Form.Check inline label={<span className='text-1'>I have read and understand the above</span>} type='radio' name='dates' id='dates'
                 checked={registration.date} onChange={() => onChangeRadio('date', true)} isInvalid={!errors.date}/>
             </Form.Group>
