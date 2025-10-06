@@ -32,7 +32,7 @@ export default function RegisterContainer({onToggleForm}) {
                     be refunded. From 48 hours until the start of camp, since resources will have
                     been purchased by then, we are not able to offer a refund. We appreciate your
                     understanding. If you need to cancel, please get in touch with
-                    us at <a href="mailto:hello@tckcamp.com">hello@tckcamp.com.</a>
+                    us at <a href="mailto:tckcampnz@gmail.com">tckcampnz@gmail.com.</a>
                 </p>
             </section>
         </div>
