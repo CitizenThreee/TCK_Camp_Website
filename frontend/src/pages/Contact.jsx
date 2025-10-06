@@ -12,7 +12,7 @@ export default function Contact() {
                         <section className="mx-auto p-3 d-flex font-1 flex-column" style={{ maxWidth: "700px" }}>
                             <div className="d-flex justify-content-between align-items-center bg-3b px-4 py-3 w-100">
                                 <p className="mb-0 text-1">email</p>
-                                <p className="mb-0 text-1"><a href="mailto:hello@tckcamp.com">hello@tckcamp.com</a></p>
+                                <p className="mb-0 text-1"><a href="mailto:tckcampnz@gmail.com">tckcampnz@gmail.com</a></p>
                             </div>
                             <div className="d-flex justify-content-between align-items-center px-4 py-3 w-100">
                                 <p className="m-0 text-1">phone</p>

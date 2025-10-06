@@ -15,7 +15,7 @@ export default function Info() {
                             that is neither fully home nor away. In fact, what is ‘home’ and what is ‘away’ may likely be a difficult
                             concept for you. We're looking for those TCKs entering New Zealand school year 10 (aged 14/15ish) and
                             above to join us. If after reading this, you're still not sure if you (or your child) fits the bill,
-                            just <a href="mailto:hello@tckcamp.com">flick us an e-mail</a> and we can help you out!
+                            just <a href="mailto:tckcampnz@gmail.com">flick us an e-mail</a> and we can help you out!
                         </p>
                     </ExpandableBox>
                     <ExpandableBox name={'When'}>
@@ -31,7 +31,7 @@ export default function Info() {
                         <p className="mt-2" style={{ textAlign: 'justify' }}>
                             Eastwest College of Intercultural Studies is the host of TCK Camp, and camp takes place on its campus in
                             the lusciously green Gordonton, just outside of Hamilton, Waikato (you can <a href="https://maps.app.goo.gl/k1p1V2jBTLyKBGAp9" target="_blank">find it here</a>).
-                            If you (or your child) might need a hand to get to Eastwest, <a href="mailto:hello@tckcamp.com">let us know</a>;
+                            If you (or your child) might need a hand to get to Eastwest, <a href="mailto:tckcampnz@gmail.com">let us know</a>;
                             we have people traveling in from all over the country who may be able to help you out with a ride. Camp takes
                             place during Eastwest's summer break, so there are vacant student housing units in which the campers are
                             accommodated along with one of their leaders. These are pretty flash for a summer camp - plenty of hot
