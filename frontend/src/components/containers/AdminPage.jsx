@@ -25,7 +25,7 @@ export default function AdminPage({ data=[] }) {
     useEffect(() => { onFilter() }, [year, search])
 
     const onFilter = () => {
-        let newData = data.filter((item) => item.paymentStatus == 'PAID' || item.paymentStatus == 'PAIDOUT').filter((item) => item.year == year);
+        let newData = data.filter((item) => item.paymentStatus == 'PAID' || item.paymentStatus == 'PAIDOUT' || item.paymentStatus == 'PAYONSITE').filter((item) => item.year == year);
         if(search) newData = newData.filter((item) => (`${item.fname} ${item.lname}`).toLowerCase().includes(search.toLowerCase()))
 
         setCurrentData(newData);
