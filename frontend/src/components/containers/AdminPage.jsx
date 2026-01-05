@@ -31,6 +31,20 @@ export default function AdminPage({ data=[] }) {
         setCurrentData(newData);
     }
 
+    const handleEmailClick = () => {
+        const emails = currentData
+            .map(item => item.email)
+            .filter(email => email && email.trim() !== '');
+        
+        if (emails.length === 0) {
+            alert('No email addresses found in the current data.');
+            return;
+        }
+
+        const mailtoLink = `mailto:${emails.join(',')}`;
+        window.location.href = mailtoLink;
+    }
+
     return (
         <>
             <div className='overflow-hidden vh-100 w-100 bg-light'>
@@ -49,7 +63,11 @@ export default function AdminPage({ data=[] }) {
 
                     <div className='d-flex justify-content-between align-items-center mt-3'>
                         <h2 className='font-1 mx-3'>{`Campers (${currentData.length})`}</h2>
-                        <Form>
+                        <div className='d-flex align-items-center gap-2'>
+                            <Button variant="primary" onClick={handleEmailClick}>
+                                Email
+                            </Button>
+                            <Form>
                             <Form.Control
                                 type="search"
                                 placeholder="Search"
@@ -57,7 +75,8 @@ export default function AdminPage({ data=[] }) {
                                 aria-label="Search"
                                 onChange={(e) => setSearch(e.target.value)}
                             />
-                        </Form>
+                            </Form>
+                        </div>
                     </div> <hr />
                     {currentData.map((item, index) => <CamperCard key={index} data={{...item}}/>)}
                 </div>
